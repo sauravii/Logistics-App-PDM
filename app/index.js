@@ -3,10 +3,9 @@ import { Text, View, StyleSheet } from "react-native";
 import * as Font from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { FONTS } from "../app/constants";
-import HomeScreen from "./screens/HomeScreen";
-import Onboarding from "./screens/Onboarding";
-import TransactionHistory from "./screens/TransactionHistory";
-import InputExpense from "./screens/InputExpense";
+import AppNavigator from "./navigations/AppNavigator";
+import HomeScreen from "./screens/home/HomeScreen";
+import Onboarding from "./screens/onboarding";
 
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = React.useState(false);
@@ -38,7 +37,7 @@ export default function App() {
 
   return (
     <View style={styles.container} onLayout={onLayoutRootView}>
-      <HomeScreen />
+      <AppNavigator />
     </View>
   );
 }
@@ -46,11 +45,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  text: {
-    fontSize: 20,
-    marginBottom: 10,
+    justifyContent: "flex-start",
+    backgroundColor: "#FFFFFF",
+    alignContent: "flex-start",
   },
 });

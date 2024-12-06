@@ -19,6 +19,7 @@ export const FONTSIZE = {
   dp_28: 28,
   dp_30: 30,
   dp_32: 32,
+  dp_36: 36,
 };
 
 export const COLOR = {
@@ -27,7 +28,7 @@ export const COLOR = {
   blueGradient: "#133E87",
   black: "#000000",
   white: "#ffffff",
-  red: "#F95B51",
+  red: "#FF0F0F",
   textPrimary: "#222222",
   textSecondary: "#666666",
 };
