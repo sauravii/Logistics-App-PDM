@@ -15,21 +15,56 @@ const InputStock = (props) => {
   const [inputStock, setInputStock] = useState("");
   const [inputSatuan, setInputSatuan] = useState("");
 
+  const [showErrorMsg, setShowErrorMsg] = useState({
+    barang: false,
+    stock: false,
+    satuan: false,
+  });
+  const [errorMessage, setErrorMessage] = useState({
+    barang: "",
+    stock: "",
+    satuan: "",
+  });
+
   const imageSource = nameSection === "Owner" ? require("../../../assets/images/img-base-admin.png") : require("../../../assets/images/img-base-admin-small.png");
 
   const onPressSave = () => {
-    Alert.alert("Barang berhasil ditambahkan!", "", [
-      {
-        text: "OK",
-        onPress: () => navigation.navigate("Stock", { nameSection }),
-      },
-    ]);
-    setInputBarang("");
-    setInputStock("");
-    setInputSatuan("");
-    console.log("barang", inputBarang);
-    console.log("stock", inputStock);
-    console.log("satuan", inputSatuan);
+    let hasError = false;
+    const newShowErrorMsg = { barang: false, stock: false, satuan: false };
+    const newErrorMessage = { barang: "", stock: "", satuan: "" };
+
+    if (inputBarang === "") {
+      hasError = true;
+      newShowErrorMsg.barang = true;
+      newErrorMessage.barang = "Nama Barang tidak boleh kosong.";
+    }
+
+    if (inputStock === "") {
+      hasError = true;
+      newShowErrorMsg.stock = true;
+      newErrorMessage.stock = "Stock tidak boleh kosong.";
+    }
+
+    if (inputSatuan === "") {
+      hasError = true;
+      newShowErrorMsg.satuan = true;
+      newErrorMessage.satuan = "Satuan tidak boleh kosong.";
+    }
+
+    if (hasError) {
+      setShowErrorMsg(newShowErrorMsg);
+      setErrorMessage(newErrorMessage);
+    } else {
+      Alert.alert("Barang berhasil ditambahkan!", "", [
+        {
+          text: "OK",
+          onPress: () => navigation.navigate("Stock", { nameSection }),
+        },
+      ]);
+      setInputBarang("");
+      setInputStock("");
+      setInputSatuan("");
+    }
   };
 
   return (
@@ -42,9 +77,9 @@ const InputStock = (props) => {
           </View>
 
           <View style={styles.inputSection}>
-            <InputFieldStocks inputName={"Nama Barang"} placeholder={"Input here"} value={inputBarang} onChangeText={setInputBarang} />
-            <InputFieldStocks inputName={"Stock"} placeholder={"Input here"} value={inputStock} onChangeText={setInputStock} keyboardType={"numeric"} />
-            <InputFieldStocks inputName={"Satuan"} placeholder={"Input here"} value={inputSatuan} onChangeText={setInputSatuan} />
+            <InputFieldStocks inputName={"Nama Barang"} placeholder={"Input here"} value={inputBarang} onChangeText={setInputBarang} hint={showErrorMsg.barang} errorMessage={errorMessage.barang} />
+            <InputFieldStocks inputName={"Stock"} placeholder={"Input here"} value={inputStock} onChangeText={setInputStock} keyboardType={"numeric"} hint={showErrorMsg.stock} errorMessage={errorMessage.stock} />
+            <InputFieldStocks inputName={"Satuan"} placeholder={"Input here"} value={inputSatuan} onChangeText={setInputSatuan} hint={showErrorMsg.satuan} errorMessage={errorMessage.satuan} />
           </View>
         </View>
 
