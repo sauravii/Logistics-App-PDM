@@ -21,7 +21,8 @@ const Onboarding = (props) => {
 
   return (
     <View>
-      <View style={styles.base}>
+      <View>
+        <Image source={require("../../assets/images/img-base-onboard.png")} />
         <Text style={styles.greets}>Hey There!</Text>
       </View>
 

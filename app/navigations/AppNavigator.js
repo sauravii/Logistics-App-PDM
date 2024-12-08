@@ -2,9 +2,9 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import HomeScreen from "../screens/home/HomeScreen";
 import Onboarding from "../screens/onboarding";
 import LoginScreen from "../screens/login";
+import HomeScreen from "../screens/home";
 
 const Stack = createStackNavigator();
 

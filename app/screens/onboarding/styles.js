@@ -14,7 +14,9 @@ export default StyleSheet.create({
     fontFamily: "Inter-Bold",
     fontSize: FONTSIZE.dp_36,
     color: COLOR.white,
-    top: 180,
+    position: "absolute",
+    top: 145,
+    left: 45,
   },
   welcome: {
     fontFamily: "Inter-SemiBold",

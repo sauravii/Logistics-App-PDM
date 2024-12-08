@@ -1,4 +1,4 @@
-import { Alert, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Alert, Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import React, { useState } from "react";
 import styles from "./styles";
 import { IcEyesClose, IcLock, IcUser } from "../../assets/icons";
@@ -66,7 +66,8 @@ const LoginScreen = (props) => {
 
   return (
     <View>
-      <View style={styles.base}>
+      <View>
+        <Image source={require("../../assets/images/img-base-onboard.png")} />
         <Text style={styles.greets}>Hey {nameSection}!</Text>
       </View>
 

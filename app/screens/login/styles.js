@@ -13,8 +13,9 @@ export default StyleSheet.create({
     fontFamily: "Inter-Bold",
     fontSize: FONTSIZE.dp_36,
     color: COLOR.white,
-    top: 180,
-    left: 50,
+    position: "absolute",
+    top: 145,
+    left: 45,
   },
   desc: {
     fontFamily: "Inter-Regular",

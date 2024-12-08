@@ -4,8 +4,8 @@ import * as Font from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { FONTS } from "../app/constants";
 import AppNavigator from "./navigations/AppNavigator";
-import HomeScreen from "./screens/home/HomeScreen";
 import Onboarding from "./screens/onboarding";
+import HomeScreen from "./screens/home";
 
 export default function App() {
   const [fontsLoaded, setFontsLoaded] = React.useState(false);
