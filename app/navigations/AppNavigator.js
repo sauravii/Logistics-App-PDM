@@ -3,12 +3,14 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { COLOR } from "../constants";
+import { IcMenu, IcMenuFocused, IcProfile, IcProfileFocused } from "../assets/icons";
 import Onboarding from "../screens/onboarding";
 import LoginScreen from "../screens/login";
 import HomeScreen from "../screens/home";
 import ProfileScreen from "../screens/profile";
-import { COLOR } from "../constants";
-import { IcMenu, IcMenuFocused, IcProfile, IcProfileFocused } from "../assets/icons";
+import StockScreen from "../screens/stock";
+import InputStock from "../screens/stock/input-stock";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -45,11 +47,8 @@ function AppNavigator() {
       <Stack.Screen name="Home" component={TabNavigator} options={{ headerShown: false }} />
       <Stack.Screen name="Onboarding" component={Onboarding} options={{ headerShown: false }} />
       <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
-      {/* <Stack.Screen name="Stock" component={StockScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="Stock" component={StockScreen} options={{ headerShown: false }} />
       <Stack.Screen name="InputStock" component={InputStock} options={{ headerShown: false }} />
-      <Stack.Screen name="Supplier" component={SupplierScreen} options={{ headerShown: false }} />
-      <Stack.Screen name="InputSupp" component={InputSupp} options={{ headerShown: false }} />
-      <Stack.Screen name="Laporan" component={LaporanScreen} options={{ headerShown: false }} /> */}
     </Stack.Navigator>
   );
 }

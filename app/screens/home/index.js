@@ -9,10 +9,16 @@ const HomeScreen = (props) => {
   const { route, navigation } = props;
   const { nameSection } = route.params;
 
+  const imageSource = nameSection === "Owner" ? require("../../assets/images/img-base-onboard.png") : require("../../assets/images/img-base-admin-2.png");
+
+  const onPressStock = () => {
+    navigation.navigate("Stock", { nameSection });
+  };
+
   return (
     <View>
       <View>
-        <Image source={require("../../assets/images/img-base-onboard.png")} />
+        <Image source={imageSource} />
         <View style={styles.header}>
           <View style={{ gap: 5 }}>
             <Text style={styles.hello}>Hello, {nameSection}</Text>
@@ -28,7 +34,7 @@ const HomeScreen = (props) => {
         </View>
 
         <View style={{ gap: 15, marginTop: -35 }}>
-          <BtnMenu iconRight={<IcStock />} menuText={"Stock"} />
+          <BtnMenu iconRight={<IcStock />} menuText={"Stock"} onPress={onPressStock} />
           <BtnMenu iconRight={<IcReport />} menuText={"Laporan"} />
           <BtnMenu iconRight={<IcSupplier />} menuText={"Supplier"} />
         </View>

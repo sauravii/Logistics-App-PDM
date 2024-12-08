@@ -23,7 +23,7 @@ export default StyleSheet.create({
   },
   header: {
     flexDirection: "row",
-    width: "88%",
+    width: "87%",
     // backgroundColor: "green",
     justifyContent: "space-between",
     alignItems: "center",
