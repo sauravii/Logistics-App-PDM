@@ -7,5 +7,9 @@ import IcStock from "./ic-stock.svg";
 import IcReport from "./ic-report.svg";
 import IcSupplier from "./ic-supplier.svg";
 import IcAvatar from "./ic-ava.svg";
+import IcMenu from "./ic-menu.svg";
+import IcMenuFocused from "./ic-menu-focused.svg";
+import IcProfile from "./ic-profile.svg";
+import IcProfileFocused from "./ic-profile-focused.svg";
 
-export { IcEyesOpen, IcEyesClose, IcLock, IcUser, IcWarning, IcReport, IcSupplier, IcStock, IcAvatar };
+export { IcEyesOpen, IcEyesClose, IcLock, IcUser, IcWarning, IcReport, IcSupplier, IcStock, IcAvatar, IcMenu, IcMenuFocused, IcProfileFocused, IcProfile };

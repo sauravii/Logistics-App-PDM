@@ -1,17 +1,48 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import Onboarding from "../screens/onboarding";
 import LoginScreen from "../screens/login";
 import HomeScreen from "../screens/home";
+import ProfileScreen from "../screens/profile";
+import { COLOR } from "../constants";
+import { IcMenu, IcMenuFocused, IcProfile, IcProfileFocused } from "../assets/icons";
 
 const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
+// Tab Navigator
+function TabNavigator({ route }) {
+  const nameSection = route.params?.nameSection || "Guest";
+
+  return (
+    <Tab.Navigator
+      screenOptions={({ route }) => ({
+        headerShown: false,
+        tabBarStyle: { backgroundColor: COLOR.bluePrimary, height: 60, paddingTop: 10 },
+        tabBarShowLabel: false,
+        tabBarIcon: ({ focused, color, size }) => {
+          if (route.name === "Home") {
+            return focused ? <IcMenuFocused width={30} /> : <IcMenu width={30} />;
+          } else if (route.name === "Profile") {
+            return focused ? <IcProfileFocused width={30} /> : <IcProfile width={30} />;
+          }
+        },
+      })}
+    >
+      <Tab.Screen name="Home" component={HomeScreen} initialParams={{ nameSection }} />
+      <Tab.Screen name="Profile" component={ProfileScreen} />
+    </Tab.Navigator>
+  );
+}
+
+// Stack Navigator
 function AppNavigator() {
   return (
     <Stack.Navigator initialRouteName="Onboarding">
-      <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="Home" component={TabNavigator} options={{ headerShown: false }} />
       <Stack.Screen name="Onboarding" component={Onboarding} options={{ headerShown: false }} />
       <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
       {/* <Stack.Screen name="Stock" component={StockScreen} options={{ headerShown: false }} />

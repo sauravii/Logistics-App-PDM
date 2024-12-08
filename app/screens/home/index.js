@@ -27,7 +27,7 @@ const HomeScreen = (props) => {
           <Text>Card</Text>
         </View>
 
-        <View style={{ gap: 15, marginTop: -15 }}>
+        <View style={{ gap: 15, marginTop: -35 }}>
           <BtnMenu iconRight={<IcStock />} menuText={"Stock"} />
           <BtnMenu iconRight={<IcReport />} menuText={"Laporan"} />
           <BtnMenu iconRight={<IcSupplier />} menuText={"Supplier"} />
