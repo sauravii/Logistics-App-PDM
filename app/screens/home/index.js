@@ -19,6 +19,10 @@ const HomeScreen = (props) => {
     navigation.navigate("Supplier", { nameSection });
   };
 
+  const onPressLaporan = () => {
+    navigation.navigate("Laporan", { nameSection });
+  };
+
   return (
     <View style={{ backgroundColor: COLOR.white, flex: 1 }}>
       <View>
@@ -39,7 +43,7 @@ const HomeScreen = (props) => {
 
         <View style={{ gap: 15, marginTop: -35 }}>
           <BtnMenu iconRight={<IcStock />} menuText={"Stock"} onPress={onPressStock} />
-          <BtnMenu iconRight={<IcReport />} menuText={"Laporan"} />
+          <BtnMenu iconRight={<IcReport />} menuText={"Laporan"} onPress={onPressLaporan} />
           <BtnMenu iconRight={<IcSupplier />} menuText={"Supplier"} onPress={onPressSupplier} />
         </View>
       </View>

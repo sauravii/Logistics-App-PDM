@@ -13,6 +13,8 @@ import StockScreen from "../screens/stock";
 import InputStock from "../screens/stock/input-stock";
 import SupplierScreen from "../screens/supplier";
 import InputSupplier from "../screens/supplier/input-supplier";
+import LaporanScreen from "../screens/laporan";
+import Penjualan from "../screens/penjualan";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -53,6 +55,8 @@ function AppNavigator() {
       <Stack.Screen name="InputStock" component={InputStock} options={{ headerShown: false }} />
       <Stack.Screen name="Supplier" component={SupplierScreen} options={{ headerShown: false }} />
       <Stack.Screen name="InputSupplier" component={InputSupplier} options={{ headerShown: false }} />
+      <Stack.Screen name="Laporan" component={LaporanScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="Penjualan" component={Penjualan} options={{ headerShown: false }} />
     </Stack.Navigator>
   );
 }

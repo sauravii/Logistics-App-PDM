@@ -27,6 +27,7 @@ export const COLOR = {
   blueSecondary: "#203259",
   blueGradient: "#133E87",
   blueButton: "#CBDCEB",
+  blueBaby: "#C6E7FF",
   black: "#000000",
   white: "#ffffff",
   red: "#FF0F0F",

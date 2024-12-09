@@ -18,5 +18,32 @@ import IcLogoSupplier from "./ic-supp.svg";
 import IcUpdate from "./ic-update.svg";
 import IcDelete from "./ic-delete.svg";
 import IcLine from "./ic-line.svg";
+import IcPembelian from "./ic-pembelian.svg";
+import IcLaba from "./ic-laba.svg";
+import IcDotBlue from "./ic-dot-blue.svg";
 
-export { IcEyesOpen, IcEyesClose, IcLock, IcUser, IcWarning, IcReport, IcSupplier, IcStock, IcAvatar, IcMenu, IcMenuFocused, IcProfileFocused, IcProfile, IcChevronLeft, IcDot, IcOptions, IcLogoSupplier, IcDelete, IcUpdate, IcLine };
+export {
+  IcEyesOpen,
+  IcEyesClose,
+  IcLock,
+  IcUser,
+  IcWarning,
+  IcReport,
+  IcSupplier,
+  IcStock,
+  IcAvatar,
+  IcMenu,
+  IcMenuFocused,
+  IcProfileFocused,
+  IcProfile,
+  IcChevronLeft,
+  IcDot,
+  IcOptions,
+  IcLogoSupplier,
+  IcDelete,
+  IcUpdate,
+  IcLine,
+  IcPembelian,
+  IcLaba,
+  IcDotBlue,
+};
