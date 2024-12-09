@@ -1,14 +1,23 @@
 import { StyleSheet, Text, TextInput, View } from "react-native";
 import React from "react";
 import { COLOR, FONTSIZE } from "../../../constants";
+import { IcWarning } from "../../../assets/icons";
 
-const InputFieldStocks = ({ placeholder, inputName, value, onChangeText, keyboardType, hint, errorMessage }) => {
+const InputFieldStocks = ({ placeholder, inputName, value, onChangeText, keyboardType, hint, errorMessage, textStyle, isBlack }) => {
   return (
     <View>
-      <Text style={styles.inputName}>{inputName}</Text>
-      <TextInput placeholder={placeholder} style={[hint ? styles.inputStyleErr : styles.inputStyle]} placeholderTextColor="rgba(255, 255, 255, 0.5)" value={value} onChangeText={onChangeText} keyboardType={keyboardType} />
+      <Text style={[styles.inputName, textStyle]}>{inputName}</Text>
+      <TextInput
+        placeholder={placeholder}
+        style={[hint ? styles.inputStyleErr : [styles.inputStyle, { borderColor: isBlack ? COLOR.black : COLOR.white }]]}
+        placeholderTextColor={isBlack ? "rgba(0, 0, 0, 0.5)" : "rgba(255, 255, 255, 0.5)"}
+        value={value}
+        onChangeText={onChangeText}
+        keyboardType={keyboardType}
+      />
       {hint ? (
         <View style={styles.errorSec}>
+          <IcWarning />
           <Text style={styles.errorMsg}>{errorMessage}</Text>
         </View>
       ) : null}
@@ -27,7 +36,6 @@ const styles = StyleSheet.create({
   },
   inputStyle: {
     borderWidth: 1,
-    borderColor: COLOR.white,
     paddingHorizontal: 15,
     color: COLOR.white,
   },
@@ -36,6 +44,13 @@ const styles = StyleSheet.create({
     borderColor: COLOR.red,
     paddingHorizontal: 15,
     color: COLOR.white,
+  },
+  errorSec: {
+    display: "flex",
+    flexDirection: "row",
+    gap: 7,
+    alignItems: "center",
+    marginTop: 5,
   },
   errorMsg: {
     fontFamily: "Inter-Regular",

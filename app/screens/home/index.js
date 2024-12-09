@@ -15,8 +15,12 @@ const HomeScreen = (props) => {
     navigation.navigate("Stock", { nameSection });
   };
 
+  const onPressSupplier = () => {
+    navigation.navigate("Supplier", { nameSection });
+  };
+
   return (
-    <View>
+    <View style={{ backgroundColor: COLOR.white, flex: 1 }}>
       <View>
         <Image source={imageSource} />
         <View style={styles.header}>
@@ -36,7 +40,7 @@ const HomeScreen = (props) => {
         <View style={{ gap: 15, marginTop: -35 }}>
           <BtnMenu iconRight={<IcStock />} menuText={"Stock"} onPress={onPressStock} />
           <BtnMenu iconRight={<IcReport />} menuText={"Laporan"} />
-          <BtnMenu iconRight={<IcSupplier />} menuText={"Supplier"} />
+          <BtnMenu iconRight={<IcSupplier />} menuText={"Supplier"} onPress={onPressSupplier} />
         </View>
       </View>
     </View>

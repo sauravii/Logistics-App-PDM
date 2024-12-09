@@ -28,8 +28,8 @@ export default StyleSheet.create({
   content: {
     alignItems: "center",
     paddingHorizontal: 45,
-    marginTop: 15,
     gap: 10,
     marginTop: 60,
+    flex: 1,
   },
 });

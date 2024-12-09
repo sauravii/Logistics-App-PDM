@@ -11,6 +11,8 @@ import HomeScreen from "../screens/home";
 import ProfileScreen from "../screens/profile";
 import StockScreen from "../screens/stock";
 import InputStock from "../screens/stock/input-stock";
+import SupplierScreen from "../screens/supplier";
+import InputSupplier from "../screens/supplier/input-supplier";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -49,6 +51,8 @@ function AppNavigator() {
       <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
       <Stack.Screen name="Stock" component={StockScreen} options={{ headerShown: false }} />
       <Stack.Screen name="InputStock" component={InputStock} options={{ headerShown: false }} />
+      <Stack.Screen name="Supplier" component={SupplierScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="InputSupplier" component={InputSupplier} options={{ headerShown: false }} />
     </Stack.Navigator>
   );
 }

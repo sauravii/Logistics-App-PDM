@@ -14,5 +14,9 @@ import IcProfileFocused from "./ic-profile-focused.svg";
 import IcChevronLeft from "./ic-arrow-left.svg";
 import IcDot from "./ic-dot.svg";
 import IcOptions from "./ic-options.svg";
+import IcLogoSupplier from "./ic-supp.svg";
+import IcUpdate from "./ic-update.svg";
+import IcDelete from "./ic-delete.svg";
+import IcLine from "./ic-line.svg";
 
-export { IcEyesOpen, IcEyesClose, IcLock, IcUser, IcWarning, IcReport, IcSupplier, IcStock, IcAvatar, IcMenu, IcMenuFocused, IcProfileFocused, IcProfile, IcChevronLeft, IcDot, IcOptions };
+export { IcEyesOpen, IcEyesClose, IcLock, IcUser, IcWarning, IcReport, IcSupplier, IcStock, IcAvatar, IcMenu, IcMenuFocused, IcProfileFocused, IcProfile, IcChevronLeft, IcDot, IcOptions, IcLogoSupplier, IcDelete, IcUpdate, IcLine };

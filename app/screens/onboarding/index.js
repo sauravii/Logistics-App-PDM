@@ -20,10 +20,10 @@ const Onboarding = (props) => {
   };
 
   return (
-    <View>
+    <View style={{ backgroundColor: COLOR.white, flex: 1 }}>
       <View>
         <Image source={require("../../assets/images/img-base-onboard.png")} />
-        <Text style={styles.greets}>Hey There!</Text>
+        <Text style={styles.greets}>Hey, There!</Text>
       </View>
 
       <View style={{ alignItems: "center", paddingHorizontal: 60, marginTop: 15 }}>

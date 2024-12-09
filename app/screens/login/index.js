@@ -26,9 +26,17 @@ const LoginScreen = (props) => {
     console.log("usn", username);
     console.log("pwd", password);
 
-    // reset
     setShowError(false);
     setErrorMessage({ username: "", password: "" });
+
+    if (username === "" || password === "") {
+      setShowError(true);
+      setErrorMessage({
+        username: username === "" ? "Username cannot be empty." : "",
+        password: password === "" ? "Password cannot be empty." : "",
+      });
+      return;
+    }
 
     const user = users[nameSection];
 
@@ -65,10 +73,10 @@ const LoginScreen = (props) => {
   };
 
   return (
-    <View>
+    <View style={{ backgroundColor: COLOR.white, flex: 1 }}>
       <View>
         <Image source={require("../../assets/images/img-base-onboard.png")} />
-        <Text style={styles.greets}>Hey {nameSection}!</Text>
+        <Text style={styles.greets}>Hey, {nameSection}!</Text>
       </View>
 
       <View style={styles.content}>

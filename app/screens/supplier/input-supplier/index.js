@@ -11,59 +11,63 @@ const InputStock = (props) => {
   const { route, navigation } = props;
   const { nameSection } = route.params;
 
-  const [inputBarang, setInputBarang] = useState("");
-  const [inputStock, setInputStock] = useState("");
-  const [inputSatuan, setInputSatuan] = useState("");
+  const [inputSuppName, setInputSuppName] = useState("");
+  const [inputSuppLoc, setInputSuppLoc] = useState("");
+  const [inputSuppCP, setInputSuppCP] = useState("");
 
   const [showErrorMsg, setShowErrorMsg] = useState({
-    barang: false,
-    stock: false,
-    satuan: false,
+    supplier: false,
+    lokasi: false,
+    CP: false,
   });
   const [errorMessage, setErrorMessage] = useState({
-    barang: "",
-    stock: "",
-    satuan: "",
+    supplier: "",
+    lokasi: "",
+    CP: "",
   });
 
   const imageSource = nameSection === "Owner" ? require("../../../assets/images/img-base-admin.png") : require("../../../assets/images/img-base-admin-small.png");
 
   const onPressSave = () => {
     let hasError = false;
-    const newShowErrorMsg = { barang: false, stock: false, satuan: false };
-    const newErrorMessage = { barang: "", stock: "", satuan: "" };
+    const newShowErrorMsg = { supplier: false, lokasi: false, CP: false };
+    const newErrorMessage = { supplier: "", lokasi: "", CP: "" };
 
-    if (inputBarang === "") {
+    if (inputSuppName === "") {
       hasError = true;
-      newShowErrorMsg.barang = true;
-      newErrorMessage.barang = "Nama Barang cannot be empty.";
+      newShowErrorMsg.supplier = true;
+      newErrorMessage.supplier = "Nama supplier cannot be empty.";
     }
 
-    if (inputStock === "") {
+    if (inputSuppLoc === "") {
       hasError = true;
-      newShowErrorMsg.stock = true;
-      newErrorMessage.stock = "Stock cannot be empty.";
+      newShowErrorMsg.lokasi = true;
+      newErrorMessage.lokasi = "Lokasi cannot be empty.";
     }
 
-    if (inputSatuan === "") {
+    if (inputSuppCP === "") {
       hasError = true;
-      newShowErrorMsg.satuan = true;
-      newErrorMessage.satuan = "Satuan cannot be empty.";
+      newShowErrorMsg.CP = true;
+      newErrorMessage.CP = "Contact Person cannot be empty.";
     }
 
     if (hasError) {
       setShowErrorMsg(newShowErrorMsg);
       setErrorMessage(newErrorMessage);
     } else {
-      Alert.alert("Barang berhasil ditambahkan!", "", [
+      Alert.alert("Supplier berhasil ditambahkan!", "", [
         {
           text: "OK",
-          onPress: () => navigation.navigate("Stock", { nameSection }),
+          onPress: () => navigation.navigate("Supplier", { nameSection }),
         },
       ]);
-      setInputBarang("");
-      setInputStock("");
-      setInputSatuan("");
+      setInputSuppName("");
+      setInputSuppLoc("");
+      setInputSuppCP("");
+
+      console.log("supp", inputSuppName);
+      console.log("loc", inputSuppLoc);
+      console.log("cp", inputSuppCP);
     }
   };
 
@@ -73,13 +77,13 @@ const InputStock = (props) => {
         <View style={styles.baseInput}>
           <View>
             <Image source={imageSource} />
-            <HeaderTitle sectionTitle={"Input Stock"} onPress={() => navigation.goBack()} />
+            <HeaderTitle sectionTitle={"Input Supplier"} onPress={() => navigation.goBack()} />
           </View>
 
           <View style={styles.inputSection}>
-            <InputFieldStocks inputName={"Nama Barang"} placeholder={"Input here"} value={inputBarang} onChangeText={setInputBarang} hint={showErrorMsg.barang} errorMessage={errorMessage.barang} />
-            <InputFieldStocks inputName={"Stock"} placeholder={"Input here"} value={inputStock} onChangeText={setInputStock} keyboardType={"numeric"} hint={showErrorMsg.stock} errorMessage={errorMessage.stock} />
-            <InputFieldStocks inputName={"Satuan"} placeholder={"Input here"} value={inputSatuan} onChangeText={setInputSatuan} hint={showErrorMsg.satuan} errorMessage={errorMessage.satuan} />
+            <InputFieldStocks inputName={"Nama Supplier"} placeholder={"Input here"} value={inputSuppName} onChangeText={setInputSuppName} hint={showErrorMsg.supplier} errorMessage={errorMessage.supplier} />
+            <InputFieldStocks inputName={"Lokasi"} placeholder={"Input here"} value={inputSuppLoc} onChangeText={setInputSuppLoc} hint={showErrorMsg.lokasi} errorMessage={errorMessage.lokasi} />
+            <InputFieldStocks inputName={"Contact Person"} placeholder={"Input here"} value={inputSuppCP} onChangeText={setInputSuppCP} hint={showErrorMsg.CP} errorMessage={errorMessage.CP} keyboardType={"numeric"} />
           </View>
         </View>
 

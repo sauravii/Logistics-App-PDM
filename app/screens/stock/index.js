@@ -1,10 +1,11 @@
 import { View, Text, Image, FlatList } from "react-native";
 import React from "react";
-import { COLOR } from "../../constants";
+import { COLOR, FONTSIZE } from "../../constants";
 import styles from "./styles";
 import ItemStock from "../../components/organisms/item-stock";
 import HeaderTitle from "../../components/molecules/header-section";
 import ButtonPrimary from "../../components/atomics/btn-primary";
+import { IcDelete, IcLine, IcUpdate } from "../../assets/icons";
 
 const StockScreen = (props) => {
   const { route, navigation } = props;
@@ -19,7 +20,6 @@ const StockScreen = (props) => {
     { id: "4", itemName: "Plywood", itemStock: "15", itemSatuan: "Lembar" },
     { id: "5", itemName: "Plywood", itemStock: "15", itemSatuan: "Lembar" },
     { id: "6", itemName: "Plywood", itemStock: "15", itemSatuan: "Lembar" },
-    { id: "7", itemName: "Plywood", itemStock: "15", itemSatuan: "Lembar" },
   ];
 
   const onPressAdd = () => {
