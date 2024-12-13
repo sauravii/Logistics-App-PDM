@@ -41,7 +41,7 @@ function TabNavigator({ route }) {
       })}
     >
       <Tab.Screen name="Home" component={HomeScreen} initialParams={{ nameSection }} />
-      <Tab.Screen name="Profile" component={ProfileScreen} />
+      <Tab.Screen name="Profile" component={ProfileScreen} initialParams={{ nameSection }} />
     </Tab.Navigator>
   );
 }

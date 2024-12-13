@@ -21,6 +21,10 @@ import IcLine from "./ic-line.svg";
 import IcPembelian from "./ic-pembelian.svg";
 import IcLaba from "./ic-laba.svg";
 import IcDotBlue from "./ic-dot-blue.svg";
+import IcNotification from "./ic-notif.svg";
+import IcLogout from "./ic-logout.svg";
+import IcProtect from "./ic-protect.svg";
+import IcChevronRight from "./ic-chevron-right.svg";
 
 export {
   IcEyesOpen,
@@ -46,4 +50,8 @@ export {
   IcPembelian,
   IcLaba,
   IcDotBlue,
+  IcNotification,
+  IcLogout,
+  IcProtect,
+  IcChevronRight,
 };
