@@ -33,4 +33,5 @@ export const COLOR = {
   red: "#FF0F0F",
   textPrimary: "#222222",
   textSecondary: "#666666",
+  greenText: "#53A14E",
 };

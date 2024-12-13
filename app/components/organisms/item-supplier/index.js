@@ -15,7 +15,7 @@ const CardSupplier = ({ onPressOption, suppCP, suppLoc, suppName, onPress }) => 
             <Text style={styles.suppCP}>Contact person: {suppCP}</Text>
           </View>
         </View>
-        <TouchableOpacity onPress={() => setIsShowOptions(true)}>
+        <TouchableOpacity onPress={onPressOption}>
           <IcOptions />
         </TouchableOpacity>
       </View>
