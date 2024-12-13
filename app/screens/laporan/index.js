@@ -16,6 +16,10 @@ const LaporanScreen = (props) => {
     navigation.navigate("Penjualan", { nameSection });
   };
 
+  const onPressPembelian = () => {
+    navigation.navigate("Pembelian", { nameSection });
+  };
+
   return (
     <View style={styles.container}>
       <View>
@@ -25,7 +29,7 @@ const LaporanScreen = (props) => {
 
       <View style={{ gap: 15, paddingHorizontal: 20, marginTop: 80 }}>
         <BtnMenu iconRight={<IcStock />} menuText={"Penjualan"} onPress={onPressPenjualan} />
-        <BtnMenu iconRight={<IcPembelian />} menuText={"Pembelian"} />
+        <BtnMenu iconRight={<IcPembelian />} menuText={"Pembelian"} onPress={onPressPembelian} />
         <BtnMenu iconRight={<IcLaba />} menuText={"Laba"} />
       </View>
     </View>

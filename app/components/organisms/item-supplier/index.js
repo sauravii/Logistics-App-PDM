@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import { COLOR, FONTSIZE } from "../../../constants";
 import { IcDelete, IcLogoSupplier, IcOptions, IcUpdate } from "../../../assets/icons";
 
-const CardSupplier = ({ onPressOption, suppCP, suppLoc, suppName }) => {
+const CardSupplier = ({ onPressOption, suppCP, suppLoc, suppName, onPress }) => {
   return (
-    <View>
+    <TouchableOpacity onPress={onPress}>
       <View style={styles.container}>
         <View style={styles.logoText}>
           <IcLogoSupplier width={50} />
@@ -19,7 +19,7 @@ const CardSupplier = ({ onPressOption, suppCP, suppLoc, suppName }) => {
           <IcOptions />
         </TouchableOpacity>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     borderColor: "rgba(0, 0, 0, 0.3)",
     borderWidth: 1,
     borderRadius: 4,
-    marginBottom: 8,
+    marginBottom: 15,
   },
   logoText: {
     flexDirection: "row",

@@ -33,36 +33,6 @@ const SupplierScreen = (props) => {
       location: "Jakarta",
       contactPerson: "+628123456789",
     },
-    {
-      id: 3,
-      name: "UD. Maju Jaya",
-      location: "Bandung",
-      contactPerson: "+628987654321",
-    },
-    {
-      id: 4,
-      name: "CV. Sumber Rejeki",
-      location: "Yogyakarta",
-      contactPerson: "+6281122334455",
-    },
-    {
-      id: 5,
-      name: "PT. Cahaya Abadi",
-      location: "Malang",
-      contactPerson: "+6285566778899",
-    },
-    {
-      id: 6,
-      name: "PT. Cahaya Abadi",
-      location: "Malang",
-      contactPerson: "+6285566778899",
-    },
-    {
-      id: 7,
-      name: "PT. Cahaya Abadi",
-      location: "Malang",
-      contactPerson: "+6285566778899",
-    },
   ];
 
   return (
@@ -77,9 +47,9 @@ const SupplierScreen = (props) => {
           <HeaderTitle sectionTitle={"Supplier"} onPress={() => navigation.goBack()} style={{ marginTop: -50 }} />
         </View>
 
-        <View style={styles.btnSec}>
+        {/* <View style={styles.btnSec}>
           <ButtonPrimary btnText={"Add"} style={{ backgroundColor: COLOR.bluePrimary }} onPress={onPressAdd} />
-        </View>
+        </View> */}
       </View>
     </KeyboardAvoidingView>
   );
