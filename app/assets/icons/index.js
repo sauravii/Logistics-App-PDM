@@ -25,6 +25,8 @@ import IcNotification from "./ic-notif.svg";
 import IcLogout from "./ic-logout.svg";
 import IcProtect from "./ic-protect.svg";
 import IcChevronRight from "./ic-chevron-right.svg";
+import IcUpdateWhite from "./ic-update-white.svg";
+import IcDeleteWhite from "./ic-delete-white.svg";
 
 export {
   IcEyesOpen,
@@ -54,4 +56,6 @@ export {
   IcLogout,
   IcProtect,
   IcChevronRight,
+  IcUpdateWhite,
+  IcDeleteWhite,
 };

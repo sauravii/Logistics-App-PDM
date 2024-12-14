@@ -36,22 +36,23 @@ const SupplierScreen = (props) => {
   ];
 
   return (
-    <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === "ios" ? "padding" : "height"}>
-      <View style={{ flex: 1 }}>
-        <View style={styles.contentSupp}>
+    <View style={styles.container}>
+      <View>
+        <Image source={imageSource} />
+        <HeaderTitle sectionTitle={"Supplier"} onPress={() => navigation.goBack()} />
+      </View>
+
+      <View style={{ flex: 1, marginTop: 15 }}>
+        <Text style={styles.listText}>Daftar Supplier</Text>
+        <View style={styles.gridBox}>
           <FlatList data={supplierData} keyExtractor={(item) => item.id.toString()} renderItem={({ item }) => <CardSupplier suppName={item.name} suppLoc={item.location} suppCP={item.contactPerson} />} showsVerticalScrollIndicator={false} />
         </View>
-
-        <View>
-          <Image source={imageSource} style={styles.baseImg} />
-          <HeaderTitle sectionTitle={"Supplier"} onPress={() => navigation.goBack()} style={{ marginTop: -50 }} />
-        </View>
-
-        {/* <View style={styles.btnSec}>
-          <ButtonPrimary btnText={"Add"} style={{ backgroundColor: COLOR.bluePrimary }} onPress={onPressAdd} />
-        </View> */}
       </View>
-    </KeyboardAvoidingView>
+
+      <View style={styles.btnSec}>
+        <ButtonPrimary btnText={"Add"} style={{ backgroundColor: COLOR.bluePrimary }} onPress={onPressAdd} />
+      </View>
+    </View>
   );
 };
 

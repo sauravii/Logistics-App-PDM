@@ -1,23 +1,33 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import { IcDot, IcOptions } from "../../../assets/icons";
 import { FONTS, FONTSIZE, COLOR } from "../../../constants";
+import UpdateDelete from "../../molecules/update-delete";
 
 const ItemStock = ({ itemName, itemStock, onPressOptions, itemSatuan }) => {
+  const [showUpdateBox, setShowUpdateBox] = useState(false);
+
   return (
-    <View style={styles.container}>
-      <View style={styles.itemDot}>
-        <IcDot />
-        <View>
-          <Text style={styles.itemName}>{itemName}</Text>
-          <Text style={styles.itemStock}>
-            Stock : {itemStock} {itemSatuan}
-          </Text>
+    <View>
+      <View style={[styles.container, { marginBottom: showUpdateBox ? 60 : 15 }]}>
+        <View style={styles.itemDot}>
+          <IcDot />
+          <View>
+            <Text style={styles.itemName}>{itemName}</Text>
+            <Text style={styles.itemStock}>
+              Stock : {itemStock} {itemSatuan}
+            </Text>
+          </View>
         </View>
+        <TouchableOpacity onPress={() => setShowUpdateBox(!showUpdateBox)}>
+          <IcOptions />
+        </TouchableOpacity>
       </View>
-      <TouchableOpacity onPress={onPressOptions}>
-        <IcOptions />
-      </TouchableOpacity>
+      {showUpdateBox && (
+        <View style={styles.updateBox}>
+          <UpdateDelete />
+        </View>
+      )}
     </View>
   );
 };
@@ -35,7 +45,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     paddingVertical: 8,
     borderRadius: 4,
-    marginBottom: 10,
   },
   itemDot: {
     flexDirection: "row",
@@ -51,5 +60,12 @@ const styles = StyleSheet.create({
     fontFamily: "Inter-Medium",
     fontSize: FONTSIZE.dp_14,
     color: COLOR.black,
+  },
+  updateBox: {
+    position: "absolute",
+    top: 40,
+    left: 195,
+    width: "100%",
+    // backgroundColor: "green",
   },
 });

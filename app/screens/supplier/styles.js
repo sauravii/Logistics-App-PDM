@@ -42,6 +42,23 @@ export default StyleSheet.create({
   },
   btnSec: {
     marginHorizontal: 20,
-    top: 480,
+    marginBottom: 40,
+  },
+  gridBox: {
+    paddingHorizontal: 20,
+    marginHorizontal: 10,
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-evenly",
+    gap: 8,
+    backgroundColor: COLOR.blueBaby,
+    paddingTop: 15,
+  },
+  listText: {
+    fontFamily: "Inter-SemiBold",
+    fontSize: FONTSIZE.dp_20,
+    color: COLOR.black,
+    marginBottom: 10,
+    marginHorizontal: 10,
   },
 });

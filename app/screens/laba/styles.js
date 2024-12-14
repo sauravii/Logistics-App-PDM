@@ -8,11 +8,11 @@ export default StyleSheet.create({
   },
   gridBox: {
     paddingVertical: 30,
+    paddingHorizontal: 5,
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "space-evenly",
     gap: 8,
-    paddingHorizontal: 5,
     backgroundColor: COLOR.blueBaby,
   },
 });
