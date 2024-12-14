@@ -27,9 +27,9 @@ const LaporanScreen = (props) => {
         <HeaderTitle sectionTitle={"Laporan"} onPress={() => navigation.goBack()} />
       </View>
 
-      <View style={{ gap: 20, paddingHorizontal: 20, marginTop: 100 }}>
-        <BtnMenu iconRight={<IcStock />} menuText={"Penjualan"} onPress={onPressPenjualan} />
-        <BtnMenu iconRight={<IcPembelian />} menuText={"Pembelian"} onPress={onPressPembelian} />
+      <View style={{ gap: 20, paddingHorizontal: 20, marginTop: 120 }}>
+        <BtnMenu iconRight={<IcStock />} menuText={"Penjualan"} onPress={onPressPenjualan} isCentered={true} />
+        <BtnMenu iconRight={<IcPembelian />} menuText={"Pembelian"} onPress={onPressPembelian} isCentered={true} />
       </View>
     </View>
   );

@@ -36,19 +36,19 @@ const InputStock = (props) => {
     if (inputBarang === "") {
       hasError = true;
       newShowErrorMsg.barang = true;
-      newErrorMessage.barang = "Nama Barang cannot be empty.";
+      newErrorMessage.barang = "Nama Barang tidak boleh kosong.";
     }
 
     if (inputStock === "") {
       hasError = true;
       newShowErrorMsg.stock = true;
-      newErrorMessage.stock = "Stock cannot be empty.";
+      newErrorMessage.stock = "Stock tidak boleh kosong.";
     }
 
     if (inputSatuan === "") {
       hasError = true;
       newShowErrorMsg.satuan = true;
-      newErrorMessage.satuan = "Satuan cannot be empty.";
+      newErrorMessage.satuan = "Satuan tidak boleh kosong.";
     }
 
     if (hasError) {

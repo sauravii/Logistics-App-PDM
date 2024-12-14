@@ -36,19 +36,19 @@ const InputStock = (props) => {
     if (inputSuppName === "") {
       hasError = true;
       newShowErrorMsg.supplier = true;
-      newErrorMessage.supplier = "Nama supplier cannot be empty.";
+      newErrorMessage.supplier = "Nama supplier tidak boleh kosong.";
     }
 
     if (inputSuppLoc === "") {
       hasError = true;
       newShowErrorMsg.lokasi = true;
-      newErrorMessage.lokasi = "Lokasi cannot be empty.";
+      newErrorMessage.lokasi = "Lokasi tidak boleh kosong.";
     }
 
     if (inputSuppCP === "") {
       hasError = true;
       newShowErrorMsg.CP = true;
-      newErrorMessage.CP = "Contact Person cannot be empty.";
+      newErrorMessage.CP = "Contact Person tidak boleh kosong.";
     }
 
     if (hasError) {

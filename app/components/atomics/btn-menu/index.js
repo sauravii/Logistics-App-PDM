@@ -1,11 +1,13 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import { IcStock } from "../../../assets/icons";
 import { FONTS, FONTSIZE, COLOR } from "../../../constants";
 
-const BtnMenu = ({ iconRight, menuText, onPress }) => {
+const BtnMenu = ({ iconRight, menuText, onPress, isCentered = false }) => {
+  const [isPhaseTwo, setIsPhaseTwo] = useState(false);
+
   return (
-    <TouchableOpacity style={styles.container} onPress={onPress}>
+    <TouchableOpacity style={[styles.container, isCentered && { justifyContent: "center", paddingVertical: 25 }]} onPress={onPress}>
       {iconRight}
       <Text style={styles.text}>{menuText}</Text>
     </TouchableOpacity>

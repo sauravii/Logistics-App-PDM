@@ -32,8 +32,8 @@ const LoginScreen = (props) => {
     if (username === "" || password === "") {
       setShowError(true);
       setErrorMessage({
-        username: username === "" ? "Username cannot be empty." : "",
-        password: password === "" ? "Password cannot be empty." : "",
+        username: username === "" ? "Username tidak boleh kosong." : "",
+        password: password === "" ? "Password tidak boleh kosong." : "",
       });
       return;
     }
@@ -49,20 +49,20 @@ const LoginScreen = (props) => {
     if (username !== user.username && password !== user.password) {
       setShowError(true);
       setErrorMessage({
-        username: "Oops! Username is wrong. Try again!",
-        password: "Oops! Password is wrong. Try again!",
+        username: "Oops! Username salah. Coba lagi!",
+        password: "Oops! Password salah. Coba lagi!",
       });
     } else if (username !== user.username) {
       setShowError(true);
       setErrorMessage({
-        username: "Oops! Username is wrong. Try again!",
+        username: "Oops! Username salah. Coba lagi!",
         password: "",
       });
     } else if (password !== user.password) {
       setShowError(true);
       setErrorMessage({
         username: "",
-        password: "Oops! Password is wrong. Try again!",
+        password: "Oops! Password salah. Coba lagi!",
       });
     } else {
       Alert.alert("Login Berhasil", `Selamat datang, ${nameSection}!`);

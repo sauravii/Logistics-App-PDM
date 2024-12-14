@@ -6,6 +6,7 @@ import { IcDotBlue } from "../../assets/icons";
 import { COLOR, FONTSIZE } from "../../constants";
 import PriceTag from "../../components/atomics/price-tag";
 import CardPenjualan from "../../components/organisms/card-penjualan";
+import ButtonPrimary from "../../components/atomics/btn-primary";
 
 const Penjualan = (props) => {
   const { route, navigation } = props;
@@ -70,6 +71,10 @@ const Penjualan = (props) => {
     });
   };
 
+  const onPressAdd = () => {
+    navigation.navigate("InputPenjualan", { nameSection });
+  };
+
   return (
     <View style={styles.container}>
       <View>
@@ -84,6 +89,10 @@ const Penjualan = (props) => {
           renderItem={({ item }) => <CardPenjualan buyerName={item.buyerName} date={formatDateToIndonesian(item.date)} itemName={item.itemName} itemQty={item.itemQty} satuan={item.satuan} price={item.price} />}
           showsVerticalScrollIndicator={false}
         />
+      </View>
+
+      <View style={{ marginHorizontal: 20, paddingTop: 15, paddingBottom: 30 }}>
+        <ButtonPrimary btnText={"Add"} style={{ backgroundColor: COLOR.bluePrimary }} onPress={onPressAdd} />
       </View>
     </View>
   );

@@ -57,7 +57,7 @@ export default StyleSheet.create({
   },
   amountUntung: {
     fontFamily: "Inter-Bold",
-    fontSize: FONTSIZE.dp_30,
+    fontSize: FONTSIZE.dp_28,
     color: COLOR.white,
     marginTop: 4,
   },
@@ -73,12 +73,12 @@ export default StyleSheet.create({
   },
   income: {
     fontFamily: "Inter-Medium",
-    fontSize: FONTSIZE.dp_16,
+    fontSize: FONTSIZE.dp_14,
     color: COLOR.textHome,
   },
   amountInc: {
     fontFamily: "Inter-SemiBold",
-    fontSize: FONTSIZE.dp_18,
+    fontSize: FONTSIZE.dp_16,
     color: COLOR.white,
   },
 });

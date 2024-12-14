@@ -31,6 +31,7 @@ import IcChevronUp from "./ic-chevron-up.svg";
 import IcOptionHorizontal from "./ic-options-horizon.svg";
 import IcIncome from "./ic-income.svg";
 import IcExpenses from "./ic-expenses.svg";
+import IcPlusWhite from "./ic-plus-white.svg";
 
 export {
   IcEyesOpen,
@@ -66,4 +67,5 @@ export {
   IcOptionHorizontal,
   IcIncome,
   IcExpenses,
+  IcPlusWhite,
 };
