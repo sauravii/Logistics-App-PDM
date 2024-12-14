@@ -27,6 +27,10 @@ import IcProtect from "./ic-protect.svg";
 import IcChevronRight from "./ic-chevron-right.svg";
 import IcUpdateWhite from "./ic-update-white.svg";
 import IcDeleteWhite from "./ic-delete-white.svg";
+import IcChevronUp from "./ic-chevron-up.svg";
+import IcOptionHorizontal from "./ic-options-horizon.svg";
+import IcIncome from "./ic-income.svg";
+import IcExpenses from "./ic-expenses.svg";
 
 export {
   IcEyesOpen,
@@ -58,4 +62,8 @@ export {
   IcChevronRight,
   IcUpdateWhite,
   IcDeleteWhite,
+  IcChevronUp,
+  IcOptionHorizontal,
+  IcIncome,
+  IcExpenses,
 };

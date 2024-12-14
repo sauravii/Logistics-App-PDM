@@ -17,6 +17,9 @@ const StockScreen = (props) => {
     { id: "1", itemName: "Paku", itemStock: "5", itemSatuan: "Box" },
     { id: "2", itemName: "Cat", itemStock: "10", itemSatuan: "Kaleng" },
     { id: "3", itemName: "Kuas", itemStock: "20", itemSatuan: "Pcs" },
+    { id: "4", itemName: "Plywood", itemStock: "15", itemSatuan: "Lembar" },
+    { id: "5", itemName: "Plywood", itemStock: "15", itemSatuan: "Lembar" },
+    { id: "6", itemName: "Plywood", itemStock: "15", itemSatuan: "Lembar" },
   ];
 
   const onPressAdd = () => {

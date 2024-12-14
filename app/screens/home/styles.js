@@ -39,4 +39,46 @@ export default StyleSheet.create({
     paddingVertical: 20,
     top: -80,
   },
+  topProfit: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  textIcon: {
+    flexDirection: "row",
+    width: "60%",
+    alignItems: "center",
+    gap: 5,
+  },
+  keuntungan: {
+    fontFamily: "Inter-SemiBold",
+    fontSize: FONTSIZE.dp_16,
+    color: COLOR.textHome,
+  },
+  amountUntung: {
+    fontFamily: "Inter-Bold",
+    fontSize: FONTSIZE.dp_30,
+    color: COLOR.white,
+    marginTop: 4,
+  },
+  incExp: {
+    marginTop: 30,
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  containerInc: {
+    gap: 3,
+    flex: 1,
+    alignItems: "flex-start",
+  },
+  income: {
+    fontFamily: "Inter-Medium",
+    fontSize: FONTSIZE.dp_16,
+    color: COLOR.textHome,
+  },
+  amountInc: {
+    fontFamily: "Inter-SemiBold",
+    fontSize: FONTSIZE.dp_18,
+    color: COLOR.white,
+  },
 });

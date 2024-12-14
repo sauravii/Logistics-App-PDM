@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     borderRadius: 13,
     borderWidth: 1,
     borderColor: "rgba(0,0,0, 0.33)",
-    marginBottom: 10,
+    marginBottom: 15,
   },
   dotText: {
     flexDirection: "row",

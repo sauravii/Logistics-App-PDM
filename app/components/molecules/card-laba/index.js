@@ -10,9 +10,6 @@ const CardLaba = ({ title, price, percentage }) => {
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.price}>{price}</Text>
       </View>
-      <View>
-        <PercentBBox percentage={percentage} />
-      </View>
     </View>
   );
 };
@@ -26,19 +23,17 @@ const styles = StyleSheet.create({
     borderColor: "rgba(0,0,0,0.3)",
     paddingVertical: 15,
     paddingHorizontal: 8,
-    justifyContent: "space-between",
-    alignItems: "center",
     display: "flex",
     flexDirection: "row",
     width: "47%",
   },
   title: {
     fontFamily: "Inter-Medium",
-    fontSize: FONTSIZE.dp_14,
+    fontSize: FONTSIZE.dp_16,
     color: "rgba(0,0,0,0.5)",
   },
   price: {
     fontFamily: "Inter-SemiBold",
-    fontSize: FONTSIZE.dp_16,
+    fontSize: FONTSIZE.dp_18,
   },
 });

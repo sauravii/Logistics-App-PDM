@@ -33,9 +33,9 @@ function TabNavigator({ route }) {
         tabBarShowLabel: false,
         tabBarIcon: ({ focused, color, size }) => {
           if (route.name === "Home") {
-            return focused ? <IcMenuFocused width={30} /> : <IcMenu width={30} />;
+            return focused ? <IcMenuFocused width={26} /> : <IcMenu width={26} />;
           } else if (route.name === "Profile") {
-            return focused ? <IcProfileFocused width={30} /> : <IcProfile width={30} />;
+            return focused ? <IcProfileFocused width={26} /> : <IcProfile width={26} />;
           }
         },
       })}

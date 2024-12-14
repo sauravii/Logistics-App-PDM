@@ -35,4 +35,5 @@ export const COLOR = {
   textSecondary: "#666666",
   greenText: "#53A14E",
   boxProfile: "#D9D9D9",
+  textHome: "#D0E5E4",
 };
