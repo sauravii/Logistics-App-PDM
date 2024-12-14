@@ -32,7 +32,7 @@ export const COLOR = {
   white: "#ffffff",
   red: "#FF0F0F",
   textPrimary: "#222222",
-  textSecondary: "#666666",
+  textSecondary: "#8A8A8A",
   greenText: "#53A14E",
   boxProfile: "#D9D9D9",
   textHome: "#D0E5E4",

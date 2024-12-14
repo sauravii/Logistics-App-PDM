@@ -64,6 +64,10 @@ const Pembelian = (props) => {
     });
   };
 
+  const onPressSupplier = () => {
+    navigation.navigate("Checkout", { nameSection: nameSection });
+  };
+
   return (
     <View style={styles.container}>
       {/* Header Section */}
@@ -83,7 +87,7 @@ const Pembelian = (props) => {
 
         {currentView === "supplier" && (
           <View style={{ width: "100%", marginTop: 50 }}>
-            <FlatList data={supplierData} keyExtractor={(item) => item.id.toString()} renderItem={({ item }) => <SingleCard title={item.name} />} showsVerticalScrollIndicator={false} />
+            <FlatList data={supplierData} keyExtractor={(item) => item.id.toString()} renderItem={({ item }) => <SingleCard title={item.name} onPress={onPressSupplier} />} showsVerticalScrollIndicator={false} />
           </View>
         )}
 

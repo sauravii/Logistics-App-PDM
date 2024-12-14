@@ -18,6 +18,7 @@ import Penjualan from "../screens/penjualan";
 import Pembelian from "../screens/pembelian";
 import LabaScreen from "../screens/laba";
 import InputPenjualan from "../screens/penjualan/input-penjualan";
+import CheckoutScreen from "../screens/checkout";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -63,6 +64,7 @@ function AppNavigator() {
       <Stack.Screen name="Penjualan" component={Penjualan} options={{ headerShown: false }} />
       <Stack.Screen name="Pembelian" component={Pembelian} options={{ headerShown: false }} />
       <Stack.Screen name="Laba" component={LabaScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="Checkout" component={CheckoutScreen} options={{ headerShown: false }} />
     </Stack.Navigator>
   );
 }

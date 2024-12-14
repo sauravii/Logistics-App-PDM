@@ -9,7 +9,9 @@ const HeaderTitle = ({ onPress, sectionTitle }) => {
       <TouchableOpacity onPress={onPress}>
         <IcChevronLeft />
       </TouchableOpacity>
-      <Text style={styles.title}>{sectionTitle}</Text>
+      <View style={styles.titleContainer}>
+        <Text style={styles.title}>{sectionTitle}</Text>
+      </View>
     </View>
   );
 };
@@ -20,15 +22,23 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: "row",
     alignItems: "center",
+    justifyContent: "center",
     gap: 8,
     position: "absolute",
     marginTop: 40,
     paddingLeft: 20,
     width: "100%",
   },
+  titleContainer: {
+    flex: 1,
+    alignItems: "center",
+    // backgroundColor: "green",
+    marginRight: 50,
+  },
   title: {
     fontFamily: "Inter-SemiBold",
     fontSize: FONTSIZE.dp_30,
     color: COLOR.white,
+    textAlign: "center",
   },
 });

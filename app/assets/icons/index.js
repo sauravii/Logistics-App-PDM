@@ -25,6 +25,7 @@ import IcNotification from "./ic-notif.svg";
 import IcLogout from "./ic-logout.svg";
 import IcProtect from "./ic-protect.svg";
 import IcChevronRight from "./ic-chevron-right.svg";
+import IcChevronDown from "./ic-chevron-down.svg";
 import IcUpdateWhite from "./ic-update-white.svg";
 import IcDeleteWhite from "./ic-delete-white.svg";
 import IcChevronUp from "./ic-chevron-up.svg";
@@ -32,6 +33,13 @@ import IcOptionHorizontal from "./ic-options-horizon.svg";
 import IcIncome from "./ic-income.svg";
 import IcExpenses from "./ic-expenses.svg";
 import IcPlusWhite from "./ic-plus-white.svg";
+import IcBNI from "./ic-bni.svg";
+import IcBCA from "./ic-bca.svg";
+import IcBRI from "./ic-bri.svg";
+import IcMandiri from "./ic-bank-mandiri.svg";
+import IcDanamon from "./ic-bank-danamon.svg";
+import IcPlusBlue from "./ic-plus-blue.svg";
+import IcSuccess from "./ic-success.svg";
 
 export {
   IcEyesOpen,
@@ -68,4 +76,12 @@ export {
   IcIncome,
   IcExpenses,
   IcPlusWhite,
+  IcBNI,
+  IcBCA,
+  IcBRI,
+  IcMandiri,
+  IcDanamon,
+  IcChevronDown,
+  IcPlusBlue,
+  IcSuccess,
 };
