@@ -18,6 +18,7 @@ const CheckoutScreen = (props) => {
 
   const [activeMenu, setActiveMenu] = useState(null);
   const [selectedBank, setSelectedBank] = useState(null);
+  const [selectedShipment, setSelectedShipment] = useState(null);
 
   const [showButton, setShowButton] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
@@ -62,6 +63,11 @@ const CheckoutScreen = (props) => {
     setActiveMenu(null);
   };
 
+  const handleSelectShipment = (shipment) => {
+    setSelectedShipment(shipment);
+    setActiveMenu(null);
+  };
+
   const onPressOrder = () => {
     setIsLoading(true);
     setCurrentView("success");
@@ -92,12 +98,25 @@ const CheckoutScreen = (props) => {
               </View>
             </MenuCheckout>
 
-            <MenuCheckout menuTitle="PENGIRIMAN" menuDesc="Gratis Standar | 3 - 4 Hari" isExpanded={activeMenu === "PENGIRIMAN"} onPress={() => setActiveMenu(activeMenu === "PENGIRIMAN" ? null : "PENGIRIMAN")}>
+            <MenuCheckout
+              menuTitle="PENGIRIMAN"
+              menuDesc={selectedShipment ? `${selectedShipment.shipName} | ${selectedShipment.deliveryTime}` : "Pilih Pengiriman"}
+              isExpanded={activeMenu === "PENGIRIMAN"}
+              onPress={() => setActiveMenu(activeMenu === "PENGIRIMAN" ? null : "PENGIRIMAN")}
+            >
               <View style={{ flexDirection: "row" }}>
                 <View style={{ width: "35%" }} />
-                <TouchableOpacity style={{ marginTop: 8 }}>
-                  <Text style={styles.address}>Paket Hemat | 6 - 7 Hari</Text>
-                </TouchableOpacity>
+                <View style={{ gap: 6, marginTop: 10 }}>
+                  <TouchableOpacity onPress={() => handleSelectShipment({ shipName: "Paket Hemat", deliveryTime: "6 - 7 Hari" })}>
+                    <Text style={styles.address}>Paket Hemat | 6 - 7 Hari</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity onPress={() => handleSelectShipment({ shipName: "Paket Kilat", deliveryTime: "2 - 3 Hari" })}>
+                    <Text style={styles.address}>Paket Kilat | 2 - 3 Hari</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity onPress={() => handleSelectShipment({ shipName: "Paket Express", deliveryTime: "1 Hari" })}>
+                    <Text style={styles.address}>Paket Express | 1 Hari</Text>
+                  </TouchableOpacity>
+                </View>
               </View>
             </MenuCheckout>
 

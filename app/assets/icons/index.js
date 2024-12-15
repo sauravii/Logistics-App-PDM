@@ -40,6 +40,8 @@ import IcMandiri from "./ic-bank-mandiri.svg";
 import IcDanamon from "./ic-bank-danamon.svg";
 import IcPlusBlue from "./ic-plus-blue.svg";
 import IcSuccess from "./ic-success.svg";
+import IcSeparator from "./ic-separator.svg";
+import IcPlusBlack from "./ic-plus-black.svg";
 
 export {
   IcEyesOpen,
@@ -84,4 +86,6 @@ export {
   IcChevronDown,
   IcPlusBlue,
   IcSuccess,
+  IcSeparator,
+  IcPlusBlack,
 };
