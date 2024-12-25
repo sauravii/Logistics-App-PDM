@@ -43,7 +43,7 @@ const HomeScreen = (props) => {
           <View>
             <View style={styles.topProfit}>
               <View style={styles.textIcon}>
-                <Text style={styles.keuntungan}>Keuntungan</Text>
+                <Text style={styles.keuntungan}>Omzet</Text>
                 <IcChevronUp />
               </View>
               <IcOptionHorizontal />

@@ -4,13 +4,14 @@ import PriceTag from "../../atomics/price-tag";
 import { COLOR, FONTSIZE } from "../../../constants";
 import { IcDotBlue } from "../../../assets/icons";
 
-const CardPembelian = ({ suppName, itemName, itemQty, satuan, price }) => {
+const CardPembelian = ({ suppName, itemName, itemQty, satuan, price, date }) => {
   return (
     <View style={styles.container}>
       <View style={styles.dotText}>
         <IcDotBlue />
         <View>
           <Text style={styles.buyerName}>{itemName}</Text>
+          <Text style={styles.buyerNameTgl}>{date}</Text>
           <Text style={styles.date}>{suppName}</Text>
           <Text style={styles.qty}>
             Jumlah: {itemQty} {satuan}
@@ -51,6 +52,11 @@ const styles = StyleSheet.create({
   buyerName: {
     fontFamily: "Inter-Medium",
     fontSize: FONTSIZE.dp_20,
+    color: COLOR.black,
+  },
+  buyerName: {
+    fontFamily: "Inter-Medium",
+    fontSize: FONTSIZE.dp_16,
     color: COLOR.black,
   },
   date: {

@@ -94,7 +94,7 @@ const Pembelian = (props) => {
         )}
 
         {currentView === "history" && (
-          <View style={{ width: "100%", marginTop: 50 }}>
+          <View style={{ width: "100%", marginTop: 35 }}>
             <FlatList
               data={salesData}
               keyExtractor={(item) => item.id.toString()}

@@ -1,4 +1,4 @@
-import { View, Text, Image, TouchableOpacity } from "react-native";
+import { View, Text, Image, TouchableOpacity, Alert } from "react-native";
 import React from "react";
 import styles from "./styles";
 import HeaderTitle from "../../components/molecules/header-section";
@@ -13,6 +13,15 @@ const ProfileScreen = (props) => {
   const imageSource = nameSection === "Owner" ? require("../../assets/images/img-base-onboard-small.png") : require("../../assets/images/img-base-admin-small.png");
   const roleSource = nameSection === "Owner" ? "Owner" : "Admin";
 
+  const nameRole = nameSection === "Owner" ? "Ariana Grande" : "Justin Bieber";
+
+  const onPressLogout = () => {
+    Alert.alert("Anda berhasil logout!");
+    setTimeout(() => {
+      navigation.navigate("Onboarding", { nameSection });
+    }, 1000);
+  };
+
   return (
     <View style={styles.container}>
       <View>
@@ -24,7 +33,7 @@ const ProfileScreen = (props) => {
         {/* hello */}
         <View style={styles.helloBox}>
           <View>
-            <Text style={styles.subTitle}>Hi, Ariana Grande</Text>
+            <Text style={styles.subTitle}>Hi, {nameRole}</Text>
             <Text style={styles.role}>{roleSource}</Text>
           </View>
           <IcAvatar width={40} />
@@ -45,7 +54,7 @@ const ProfileScreen = (props) => {
         <View style={styles.logoutBox}>
           <View style={styles.innerLogout}>
             <Text style={styles.textLogout}>Logout</Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={onPressLogout}>
               <IcLogout />
             </TouchableOpacity>
           </View>

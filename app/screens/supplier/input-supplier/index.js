@@ -26,7 +26,7 @@ const InputStock = (props) => {
     CP: "",
   });
 
-  const imageSource = nameSection === "Owner" ? require("../../../assets/images/img-base-admin.png") : require("../../../assets/images/img-base-admin-small.png");
+  const imageSource = nameSection === "Owner" ? require("../../../assets/images/img-base-admin-small.png") : require("../../../assets/images/img-base-admin-small.png");
 
   const onPressSave = () => {
     let hasError = false;

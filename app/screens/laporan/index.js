@@ -10,14 +10,18 @@ const LaporanScreen = (props) => {
   const { route, navigation } = props;
   const { nameSection } = route.params;
 
-  const imageSource = nameSection === "Owner" ? require("../../assets/images/img-base-onboard.png") : require("../../assets/images/img-base-admin-small.png");
+  const imageSource = nameSection === "Owner" ? require("../../assets/images/img-base-onboard-small.png") : require("../../assets/images/img-base-admin-small.png");
 
   const onPressPenjualan = () => {
     navigation.navigate("Penjualan", { nameSection });
   };
 
   const onPressPembelian = () => {
-    navigation.navigate("Pembelian", { nameSection });
+    if (nameSection === "Owner") {
+      navigation.navigate("Pembelian", { nameSection });
+    } else if (nameSection === "Admin") {
+      navigation.navigate("HistoryPembelian", { nameSection });
+    }
   };
 
   return (

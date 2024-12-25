@@ -20,6 +20,7 @@ import LabaScreen from "../screens/laba";
 import InputPenjualan from "../screens/penjualan/input-penjualan";
 import CheckoutScreen from "../screens/checkout";
 import StoreItem from "../screens/store-item";
+import HistoryPembelian from "../screens/pembelian/history-pembelian";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -67,6 +68,7 @@ function AppNavigator() {
       <Stack.Screen name="Laba" component={LabaScreen} options={{ headerShown: false }} />
       <Stack.Screen name="Checkout" component={CheckoutScreen} options={{ headerShown: false }} />
       <Stack.Screen name="StoreItem" component={StoreItem} options={{ headerShown: false }} />
+      <Stack.Screen name="HistoryPembelian" component={HistoryPembelian} options={{ headerShown: false }} />
     </Stack.Navigator>
   );
 }

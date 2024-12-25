@@ -4,7 +4,7 @@ import { IcChevronDown, IcChevronRight } from "../../../assets/icons";
 import { COLOR, FONTSIZE } from "../../../constants";
 import CardBank from "../../atomics/card-bank";
 
-const MenuCheckout = ({ menuTitle, menuDesc, isExpanded, onPress, children }) => {
+const MenuCheckout = ({ menuTitle, menuDesc, isExpanded, onPress, children, isPhaseTwo }) => {
   return (
     <View>
       <View style={styles.container}>
@@ -15,12 +15,19 @@ const MenuCheckout = ({ menuTitle, menuDesc, isExpanded, onPress, children }) =>
             {
               fontFamily: "Inter-Regular",
               fontSize: 14,
+              width: isPhaseTwo ? "52%" : "60%",
             },
           ]}
         >
           {menuDesc}
         </Text>
-        <TouchableOpacity onPress={onPress}>{isExpanded ? <IcChevronDown width={18} /> : <IcChevronRight />}</TouchableOpacity>
+        {isPhaseTwo ? (
+          <View>
+            <Text style={styles.menuDescTwo}>HARGA</Text>
+          </View>
+        ) : (
+          <TouchableOpacity onPress={onPress}>{isExpanded ? <IcChevronDown width={18} /> : <IcChevronRight />}</TouchableOpacity>
+        )}
       </View>
       {isExpanded && children}
     </View>
@@ -47,6 +54,11 @@ const styles = StyleSheet.create({
   },
   menuDesc: {
     color: COLOR.black,
-    width: "62%",
+    // backgroundColor: "green",
+  },
+  menuDescTwo: {
+    color: COLOR.black,
+    width: "100%",
+    // backgroundColor: "blue",
   },
 });

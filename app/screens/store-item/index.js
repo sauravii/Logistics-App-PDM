@@ -1,4 +1,4 @@
-import { View, Text, Image, TouchableOpacity, FlatList } from "react-native";
+import { View, Text, Image, TouchableOpacity, FlatList, Alert } from "react-native";
 import React from "react";
 import styles from "./styles";
 import HeaderTitle from "../../components/molecules/header-section";
@@ -17,7 +17,7 @@ const StoreItem = (props) => {
   const [itemCount, setItemCount] = useState(0);
   const [isPhaseTwo, setIsPhaseTwo] = useState(false);
 
-  const imageSource = nameSection === "Owner" ? require("../../assets/images/img-base-onboard.png") : require("../../assets/images/img-base-admin-small.png");
+  const imageSource = nameSection === "Owner" ? require("../../assets/images/img-base-onboard-small.png") : require("../../assets/images/img-base-admin-small.png");
 
   const itemsData = [
     { id: 1, itemName: "Semen", itemPrice: 75000 },
@@ -36,7 +36,11 @@ const StoreItem = (props) => {
   };
 
   const onPressCheckout = () => {
-    navigation.navigate("Checkout", { nameSection: nameSection });
+    if (isPhaseTwo == false) {
+      Alert.alert("Belum ada barang di cart!");
+    } else {
+      navigation.navigate("Checkout", { nameSection: nameSection });
+    }
   };
 
   return (

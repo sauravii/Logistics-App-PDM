@@ -11,9 +11,9 @@ export default StyleSheet.create({
   },
   inputSection: {
     paddingHorizontal: 30,
-    marginTop: 25,
     gap: 13,
-    paddingBottom: 100,
+    paddingBottom: 120,
+    marginTop: -25,
   },
   baseInput: {
     backgroundColor: COLOR.blueGradient,
