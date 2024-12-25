@@ -44,6 +44,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     paddingHorizontal: 15,
     color: COLOR.white,
+    height: 42,
+    justifyContent: "center",
   },
   inputStyleBtn: {
     borderWidth: 1,
@@ -58,6 +60,8 @@ const styles = StyleSheet.create({
     borderColor: COLOR.red,
     paddingHorizontal: 15,
     color: COLOR.white,
+    height: 42,
+    justifyContent: "center",
   },
   inputStyleErrBtn: {
     borderWidth: 1,
